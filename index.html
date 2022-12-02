@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <head>
+        <h1>Pedra, papel e tesoura</h1>
+    </head>
+    <section class="player2">
+        <div>
+            Player 2 <br><br>
+            <input type="button" value="pedra" id="pedra2" onclick="pedra2()">
+            <input type="button" value="papel" id="papel2" onclick="papel2()">
+            <input type="button" value="tesoura" id="tesoura2" onclick="tesoura2()">
+        </div>
+    </section>
+    <section class="player1">
+        <div>
+            Player 1 <br><br>
+            <input type="button" class="botao1" value="pedra" id="pedra1" onclick="pedra1()">
+            <input type="button" class="botao1" value="papel" id="papel1" onclick="papel1()">
+            <input type="button" class="botao1" value="tesoura" id="tesoura1" onclick="tesoura1()">
+        </div>
+    </section>
+        <input type="button" class="checar" value="Checar resultado!" onclick="checar()" id="botaochecar">
+        <div id="res" class="botaochecar"></div>
+</body>
+</html>
