@@ -1,5 +1,6 @@
 let jogador1;
 let jogador2;
+let vencedor;
 
 function pedra1() {
   jogador1 = document.getElementById("pedra1").id;
@@ -30,33 +31,42 @@ function checar() {
   if (jogador1 == "tesoura1" && jogador2 == "papel2") {
     console.log("Jogador 1 venceu!");
     res.innerHTML = "Jogador 1 venceu!";
+    vencedor = "Jogador 1";
   } else if (jogador1 == "papel1" && jogador2 == "pedra2") {
     console.log("Jogador 1 venceu!");
     res.innerHTML = "Jogador 1 venceu!";
+    vencedor = "Jogador 1";
   } else if (jogador1 == "pedra1" && jogador2 == "tesoura2") {
     console.log("Jogador 1 venceu!");
     res.innerHTML = "Jogador 1 venceu!";
+    vencedor = "Jogador 1";
   } else if (jogador1 == "tesoura1" && jogador2 == "pedra2") {
     console.log("Jogador 2 venceu!");
     res.innerHTML = "Jogador 2 venceu!";
+    vencedor = "Jogador 2";
   } else if (jogador1 == "papel1" && jogador2 == "tesoura2") {
     console.log("Jogador 2 venceu!");
     res.innerHTML = "Jogador 2 venceu!";
+    vencedor = "Jogador 2";
   } else if (jogador1 == "pedra1" && jogador2 == "papel2") {
     console.log("Jogador 2 venceu!");
     res.innerHTML = "Jogador 2 venceu!";
+    vencedor = "Jogador 2";
   } else if (jogador1 == "tesoura1" && jogador2 == "tesoura2") {
     console.log("Empate!");
     res.innerHTML = "Empate!";
+    vencedor = "Empate";
   } else if (jogador1 == "papel1" && jogador2 == "papel2") {
     console.log("Empate!");
     res.innerHTML = "Empate!";
+    vencedor = "Empate";
   } else if (jogador1 == "pedra1" && jogador2 == "pedra2") {
     console.log("Empate!");
     res.innerHTML = "Empate!";
+    vencedor = "Empate";
   }
 
-  const data = { username: "Victor Jordan" };
+  const data = { vencedor: vencedor };
 
   fetch("http://localhost:3000/post", {
     method: "POST",
